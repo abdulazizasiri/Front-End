@@ -1,1 +1,97 @@
 1 rem == 16px
+
+rems are used by Bootstrap.
+
+Avoid margin top proprty.
+
+inherit property is used as much as possible.
+
+border-box sizing.
+
+Native font stacks. The  current font on the specific device or browser.
+
+special styles: page patterns.
+
+
+
+ class= container: it is a bootstrap specific. it makes the page responsvness.
+
+ also, you can add a <div class='display-1'> A header </dev> // This is like h1 but way bigger.
+
+
+<p> <div> <h1> all have boostrap built in class for styling. Thery are great.<>
+
+
+
+- - - -- - - - - - -- - - - - - - -- - - - -  - - - - - - - - - - - -- - - - - - -  - - - -  -
+
+
+Alignment utilities: By-default texts are aligned to left of the page.
+
+. text-justify
+. text-nowrap
+. test-sm-center
+  .text-xl-center
+. text-lowercase
+.text-uppercase
+.text-captilize
+
+Text Style
+
+.font-weght-blod
+font-weight-
+
+- - - -- - - - - - -- - - - - - - -- - - - -  - - - - - - - - - - - -- - - - - - -  - - - -  -
+
+list:
+
+. list-unstyled no bullets.
+
+- - - -- - - - - - -- - - - - - - -- - - - -  - - - - - - - - - - - -- - - - - - -  - - - -  -
+Use colors with Bootstrap.
+
+
+The class is : text-COLOR
+. text-white
+. text-primary // This is blue
+.text-success // green
+. text-info // light-blue
+. text-warning // ORange.
+. text-danger // red.\
+
+.bg means background.
+
+.bg-faded /// gives you a faded background.
+
+- - - -- - - - - - -- - - - - - - -- - - - -  - - - - - - - - - - - -- - - - - - -  - - - -  -
+Bootstrp.
+
+img-fluid  responsive images.
+
+rounded, rounded-DIR:
+DIR vlaues.
+top
+,
+right
+
+left
+
+circle
+
+rounded-0: no roundnies.
+
+
+float-left or float-right
+
+.text-center center inline.
+
+
+mx mute
+
+
+Figures: these work on the figure element on html5.
+
+figure on the <figure>
+
+
+figure-caption
