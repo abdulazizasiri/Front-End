@@ -1,0 +1,6 @@
+.head_img{
+heigh: 50vh;
+background: url("../imgs/coding-img.png") no-repeat center center;
+background-size:cover;
+margin-bottom: 20px;
+}
