@@ -1,0 +1,25 @@
+- React never reads from the real DOM. It just writes to the real DOM if changes have occurred.
+
+
+
+-React never reads from the real DOM. It just writes to the real DOM if changes have occurred ?
+
+All of the React Elements that make up the webpage.
+
+
+
+The React.render function takes in the location of where React code should be added on the webpage.
+
+
+JSX: Stand for javascript as XML.
+
+
+The React.render function takes in the location of where React code should be added on the webpage.
+TRUE
+
+
+
+The React.render function takes in the location of where React code should be added on the webpage.
+FALSE
+
+
