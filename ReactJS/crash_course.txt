@@ -5,6 +5,10 @@ components.
 render method is required when we create a component.
  render(){
  return (
- 
+
  )
  }
+
+
+Other techniques have emerged using createClass.
+We can make classes. Using a class keyword.
