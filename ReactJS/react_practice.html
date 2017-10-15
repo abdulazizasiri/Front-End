@@ -45,13 +45,19 @@ ReactDOM.render(<ul>
 //   }
 // }
 let Note = React.createClass({
+  getInitialState(){
+    return {editing: false}
+  },
   edit(){
-    alert('Hey')
+    this.setState({editing: true})
   },
   remove(){
     alert('Removing element')
   },
-  render(){
+  save(){
+    this.setState ({editing: false})
+  },
+  renderDisply(){
     return(
     <div className="note">
     <p>{this.props.children}</p>
@@ -61,6 +67,22 @@ let Note = React.createClass({
     </span>
     </div>
     )
+  },
+  renderForm (){
+    return (
+      <div className='note'>
+      <textarea></textarea>
+      <button onClick={this.save}>SAVE</button>
+
+      </div>
+    )
+  },
+  render(){
+    if (this.state.editing){
+      return this.renderForm()
+    } else {
+      return this.renderDisply()
+    }
   }
 })
 
