@@ -85,23 +85,39 @@ let Note = React.createClass({
   }
 })
 let Board = React.createClass({
+  // This code handles error in the code.
   propTypes: {
     count: function(props, propName) {
       if (typeof props[propName] !== 'number'){
         return new Error ('Count must be a number');
       }
+      if (props[propName] > 100) {
+        return new Error (props[propName]+' notes is to many: create less than or equal to 100');
+      }
     }
   } ,
+  getInitialState(){
+    return {
+      notes: [
+      'call Bob',
+      'Finish Hw',
+      'Finsih React',
+      'finsih Javascript'
+      ]
+    }
+  },
   render() {
     return (
       <div className='board'>
-      <p>{this.props.count}</p>
+      {this.state.notes.map((note,i)=>{
+        return <Note key={i}>{note}</Note>
+      })}
       </div>
       )
   }
 })
 // I do not understand why using div in this example.
-ReactDOM.render(<Board count={'Aziz'}/>,document.getElementById('H'))
+ReactDOM.render(<Board count={10}> </Board>,document.getElementById('H'))
 
 </script>
 </body>
