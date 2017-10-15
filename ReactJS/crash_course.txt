@@ -1,3 +1,5 @@
+
+
 When we think of a react app, we should be thinking about a collection of
 components.
 
@@ -12,3 +14,15 @@ render method is required when we create a component.
 
 Other techniques have emerged using createClass.
 We can make classes. Using a class keyword.
+There are some ways to create components we saw.
+
+1- using createClass
+2- using class keyword
+3- using an anonymous functions.
+
+
+using states for your React projects.
+
+1- getInitialState(){
+	// is a very important function that run immediatly inside the cimponent.
+}
