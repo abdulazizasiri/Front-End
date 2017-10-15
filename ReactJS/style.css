@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+/*@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
 
 body,
 html,
@@ -67,4 +67,26 @@ div.note > textarea {
   top: 10px;
   right: 10px;
   font-size: 1.5em;
-}''
+}*/
+
+body {
+  background-color: black;
+}
+#text_info {
+  position: relative;
+  font-size:  200%;
+  font-family:Arial, Helvetica, sans-serif;
+  top: 90px;
+  left: 40px;
+  color: white;
+}
+#buttons button{
+  position: absolute;
+  top: 0px;
+  background-color: black;
+  border: hidden;
+  right: 0px;
+  color: white;
+  cursor:pointer;
+  left: 80%;
+}

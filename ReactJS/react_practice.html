@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://fb.me/react-0.14.3.js"></script>
+  <script src="https://fb.me/react-dom-0.14.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+  <title> React </title>
+
+</head>
+<body>
+  <div id="H"></div> <!-- This tag is acting like a placeholder for the react component.-->
+  <h1 id="HH"></h1>
+<script type="text/babel">
+//The first way very simple: ReactDOM.render(React.createElement('div',null,'Hello World'),document.getElementById('HH')) // this function takes two aregumnets: 1- What we want to create
+                  //2- Where we want to render it.
+ReactDOM.render(<ul>
+
+<li> item 1 </li>
+<li> item 2 </li>
+<li> item 3 </li>
+
+  </ul>, document.getElementById('HH')
+)
+
+</script>
+</body>
+    </html>
