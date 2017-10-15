@@ -1,0 +1,22 @@
+var  Dog = function() {
+	let name , breed ; 
+}
+
+let firstdog = new Dog;
+
+let secondog = new Dog;
+
+
+if (firstdog === secondog){
+	console.log('Hey')
+}
+
+let obj = {
+	x:1,
+	y: 12,
+	p: function (){
+	return this;
+	}
+}
+let y = obj.p();
+console.log(y.x);

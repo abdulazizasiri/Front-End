@@ -10,6 +10,9 @@
 
 </head>
 <body>
+
+
+
   <div id="H"></div> <!-- This tag is acting like a placeholder for the react component.-->
 
 <script type="text/babel">
@@ -44,6 +47,7 @@ ReactDOM.render(<ul>
 //    )
 //   }
 // }
+
 let Note = React.createClass({
   getInitialState(){
     return {editing: false}
@@ -95,21 +99,22 @@ let Board = React.createClass({
         return new Error (props[propName]+' notes is to many: create less than or equal to 100');
       }
     }
-  } ,
+  },
   getInitialState(){
     return {
       notes: [
       'call Bob',
       'Finish Hw',
       'Finsih React',
-      'finsih Javascript'
-      ]
+      'finsih Javascript']
     }
   },
   render() {
     return (
       <div className='board'>
-      {this.state.notes.map((note,i)=>{
+      {this.state.notes.map(function(note,i){
+        console.log('Notes'+note)
+
         return <Note key={i}>{note}</Note>
       })}
       </div>
