@@ -26,15 +26,22 @@ ReactDOM.render(<ul>
 
   </ul>, document.getElementById('HH')
 )*/
-class Component extends React.Component {
-  render(){
-    return (<div>
-     <h1> Hello World </h1>
-     <p> This is my first React component</p>
-     </div>
-   )
-  }
+const Component = ()=> {
+  return (<div>
+   <h1> Hello World </h1>
+   <p> This is my first React component</p>
+   </div>
+ )
 }
+// class Component extends React.Component {
+//   render(){
+//     return (<div>
+//      <h1> Hello World </h1>
+//      <p> This is my first React component</p>
+//      </div>
+//    )
+//   }
+// }
 // let Component = React.createClass({
 //   render(){
 //     return ( <div>
@@ -44,7 +51,8 @@ class Component extends React.Component {
 //     )
 //   }
 // })
-ReactDOM.render(<Component> </Component>, document.getElementById("HH"))
+
+ReactDOM.render(<Component> </Component>, document.getElementById("H"))
 
 </script>
 </body>
