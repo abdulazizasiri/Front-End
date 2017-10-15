@@ -129,19 +129,61 @@
 // console.log(fun(1,2,2))
 // console.log(fun2(1,2,2))
 // calling a function immediately.
-otherDog();
+// otherDog();
 
-function myDog() {
-  let dogName = "Fido";
-  function otherDog(){
-      var dogName1 = "Rover";
-    console.log(dogName1);
+// function myDog() {
+//   let dogName = "Fido";
+//   function otherDog(){
+//       var dogName1 = "Rover";
+//     console.log(dogName1);
 
-  }
+//   }
 
 
-}
-myDog();
+// }
+// myDog();
+
+// using modules:
+let ray = (function(){
+	return {
+		speak:function(){
+			console.log("Hello modules");
+	}
+	
+};
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
