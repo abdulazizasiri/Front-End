@@ -32,3 +32,6 @@ States is a big topic in react that needs a apecia care.
 
 How to grap value from fields or text areas: use the ref property.
 
+
+props types.
+

@@ -84,9 +84,24 @@ let Note = React.createClass({
     
   }
 })
-
+let Board = React.createClass({
+  propTypes: {
+    count: function(props, propName) {
+      if (typeof props[propName] !== 'number'){
+        return new Error ('Count must be a number');
+      }
+    }
+  } ,
+  render() {
+    return (
+      <div className='board'>
+      <p>{this.props.count}</p>
+      </div>
+      )
+  }
+})
 // I do not understand why using div in this example.
-ReactDOM.render(<Note>Hello World</Note>,document.getElementById('H'))
+ReactDOM.render(<Board count={'Aziz'}/>,document.getElementById('H'))
 
 </script>
 </body>
