@@ -128,12 +128,20 @@
 // 
 // console.log(fun(1,2,2))
 // console.log(fun2(1,2,2))
-// calling a function immediatly.
+// calling a function immediately.
+otherDog();
+
+function myDog() {
+  let dogName = "Fido";
+  function otherDog(){
+      var dogName1 = "Rover";
+    console.log(dogName1);
+
+  }
 
 
-let object = function(){
-  console.log("foo")
-}();
+}
+myDog();
 
 
 
