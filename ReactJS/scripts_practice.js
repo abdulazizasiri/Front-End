@@ -101,33 +101,42 @@
 // let onject = {name: "CAT"};
 // speak.apply(onject,['meow','Huskey']) 
 
-let fun = function(){
-    let sum = 0 ;
-    console.log("size of arguments: "+arguments.length)
-    console.log("This is function 1");
-  for (let i = 0 ; i<arguments.length ; i++){
+// let fun = function(){
+//     let sum = 0 ;
+//     console.log("size of arguments: "+arguments.length)
+//     console.log("This is function 1");
+//   for (let i = 0 ; i<arguments.length ; i++){
+// 
+//     sum += arguments[i];
+//   }
+//   return (sum);
+// }
+// // OR 
+// 
+// let fun2 = function(...argument){
+//   let sum = 0 ;
+//   console.log("size of arguments: "+argument.length)
+//   console.log("This is function 2");
+// for (let i = 0 ; i<arguments.length ; i++){
+// 
+//   sum += argument[i];
+// }
+// return (sum);
+// }
+// 
+// 
+// 
+// console.log(fun(1,2,2))
+// console.log(fun2(1,2,2))
+// calling a function immediatly.
 
-    sum += arguments[i];
-  }
-  return (sum);
-}
-// OR 
 
-let fun2 = function(...argument){
-  let sum = 0 ;
-  console.log("size of arguments: "+argument.length)
-  console.log("This is function 2");
-for (let i = 0 ; i<arguments.length ; i++){
-
-  sum += argument[i];
-}
-return (sum);
-}
+let object = function(){
+  console.log("foo")
+}();
 
 
 
-console.log(fun(1,2,2))
-console.log(fun2(1,2,2))
 
 
 
