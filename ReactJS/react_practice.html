@@ -13,6 +13,11 @@
 <script type="text/babel">
 //The first way very simple: ReactDOM.render(React.createElement('div',null,'Hello World'),document.getElementById('HH')) // this function takes two aregumnets: 1- What we want to create
                   //2- Where we want to render it.
+
+
+
+// This is one way to deal with  react components.
+/*
 ReactDOM.render(<ul>
 
 <li> item 1 </li>
@@ -20,7 +25,17 @@ ReactDOM.render(<ul>
 <li> item 3 </li>
 
   </ul>, document.getElementById('HH')
-)
+)*/
+let Component = React.createClass({
+  render(){
+    return ( <div>
+      <h1> Hello World </h1>
+      <p> This is my first React component</p>
+      </div>
+    )
+  }
+})
+ReactDOM.render(<Component/>, document.getElementById("HH"))
 
 </script>
 </body>

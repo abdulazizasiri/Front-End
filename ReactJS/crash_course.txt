@@ -1,2 +1,10 @@
 When we think of a react app, we should be thinking about a collection of
-components. 
+components.
+
+
+render method is required when we create a component.
+ render(){
+ return (
+ 
+ )
+ }
