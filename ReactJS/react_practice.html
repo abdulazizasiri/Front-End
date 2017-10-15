@@ -55,6 +55,8 @@ let Note = React.createClass({
     alert('Removing element')
   },
   save(){
+    var val = this.refs.newText.value ;
+    alert(val);
     this.setState ({editing: false})
   },
   renderDisply(){
@@ -71,7 +73,7 @@ let Note = React.createClass({
   renderForm (){
     return (
       <div className='note'>
-      <textarea></textarea>
+      <textarea ref="newText"></textarea>
       <button onClick={this.save}>SAVE</button>
 
       </div>
@@ -84,7 +86,7 @@ let Note = React.createClass({
 })
 
 // I do not understand why using div in this example.
-ReactDOM.render(<Note/>,document.getElementById('H'))
+ReactDOM.render(<Note>Hello World</Note>,document.getElementById('H'))
 
 </script>
 </body>

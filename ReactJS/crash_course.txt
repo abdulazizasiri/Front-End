@@ -25,4 +25,10 @@ using states for your React projects.
 
 1- getInitialState(){
 	// is a very important function that run immediatly inside the cimponent.
+
 }
+
+States is a big topic in react that needs a apecia care. 
+
+How to grap value from fields or text areas: use the ref property.
+
