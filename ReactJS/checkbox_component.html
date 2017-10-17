@@ -9,12 +9,13 @@
 </head>
 <body>
 	<div id='reactt'> </div>
+	<div id='reac'> </div>
 	<script type="text/babel">
 
 	var Check = React.createClass({
 		getInitialState(){
 			return {checked: true}
-
+	
 		},
 		handleChange(){
 			this.setState({checked: !this.state.checked})
@@ -28,6 +29,7 @@
 			}
 			return (
 				<div> 
+				<p> {this.props.children}</p>
 				<input type='checkbox' onChange={this.handleChange}
 				 defaultChecked={this.state.checked}/>
 				<p>This is {msg}</p>
@@ -35,8 +37,15 @@
 				)
 		}
 	})
+var Button = React.createClass({
+	render(){
+		return (
+			<div>
+			<h1>{this.props.children}</h1>
+			</div>
+		)
+	}
+})
 
-	ReactDOM.render(<Check/>, document.getElementById('reactt'))
-	</script>
-	</body>
-	</html>
+	ReactDOM.render(<Check>This is Check box</Check>, document.getElementById('reactt'))
+	ReactDOM.render(<div><Button> My name is Aziz</Button></div>, document.getElementById('reac'));

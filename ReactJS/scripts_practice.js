@@ -143,19 +143,17 @@
 // }
 // myDog();
 
-// using modules:
-let ray = (function(){
-	return {
-		speak:function(){
-			console.log("Hello modules");
+let DOG = {
+	x:23,
+	y:34,
+	edit:function(){
+		console.log(this);
 	}
-	
-};
-
-})();
+}
 
 
 
+let dogone = DOG.edit();
 
 
 

@@ -1,0 +1,48 @@
+/*var  Dog = function() {
+	let name , breed ; 
+}
+
+let firstdog = new Dog;
+
+let secondog = new Dog;
+
+
+if (firstdog === secondog){
+	console.log('Hey')
+}
+
+let obj = {
+	x:1,
+	y: 12,
+	p: function (){
+	return this;
+	}
+}
+let y = obj.p();
+console.log(y.x);
+
+
+let Circle = function (){
+	let radius ; 
+	let height ;
+	 console.log(this);
+	 let y = this ;
+	
+}
+
+/*let first = new Circle; 
+first.radius = 13; 
+first.height = 13 ; 
+
+let second = new Circle ;
+let third = new Circle ;
+let forth = new Circle ;
+let fifth = new Circle ;
+let sixth = new Circle ;
+
+// This in Circle exaple will point to
+
+
+let y = first;
+
+console.log('Y NOW HAS THIS '+y.radius);*/

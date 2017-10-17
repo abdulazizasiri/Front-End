@@ -7,7 +7,6 @@ components.
 render method is required when we create a component.
  render(){
  return (
-
  )
  }
 
@@ -38,3 +37,80 @@ props types: Typerror
 
 - Last video in section 4 is about putting notes on the board.
 
+
+
+
+-  Render multiple components: Every single component can only return one parent element. 
+
+Example: 
+
+
+
+// This is wrong. Make sure to return one parent component: Example: 
+
+var component = React.createClass({
+render: function() {
+
+return (
+<h1> Hello World </h1>
+<p> My name is Aziz </p>
+
+)
+}
+})
+
+
+
+CORRECT:
+
+var component = React.createClass({
+render: function() {
+
+return (
+<div>
+<h1> Hello World </h1>
+<p> My name is Aziz </p>
+</div>
+)
+}
+})
+
+
+
+Even inside the ReactDOM.render (
+<div>
+<Component/>
+<Component/>
+<Component/>
+</div>
+)
+
+
+
+
+react states: properties vs states ? 
+
+
+propties such as this.props.children or this.props.text
+
+states: can change anytime. Say you want to change states of a  button when hovering over the button, states can let you do that because 
+
+Whenever something stays the same , then use properties, otherwise, use states if components
+
+
+- - — - - -- - — - - -- - — - - -- - — - - -- - — - - -- - — - - -- - — - - -- - — - - -
+
+Now, we want to change the Edit button.
+
+
+
+Multiple child components: Easy.
+
+
+
+
+
+—————————————————————————————————————————————————————————————————————————————————————————
+Deleting and updating components:
+
+ 

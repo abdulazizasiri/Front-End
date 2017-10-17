@@ -9,7 +9,7 @@
   <title> React </title>
 
 </head>
-<body id="H">
+<div id="H"></div>
 
 
 
@@ -50,7 +50,9 @@ ReactDOM.render(<ul>
 
 let Note = React.createClass({
   getInitialState(){
-    return {editing: false}
+    return {editing: false,
+            addnote: false
+    }
   },
   edit(){
     this.setState({editing: true})
@@ -63,6 +65,10 @@ let Note = React.createClass({
     alert(val);
     this.setState ({editing: false})
   },
+  addnote(){
+    this.setState({addnote: true})
+  },
+  
   renderDisply(){
     return(
     <div className="note">
@@ -70,6 +76,7 @@ let Note = React.createClass({
     <span>
     <button onClick={this.edit}>EDIT </button>
     <button onClick={this.remove}> X </button>
+    <button onClick={this.addnote}>ADD</button>
     </span>
     </div>
     )
@@ -84,8 +91,14 @@ let Note = React.createClass({
     )
   },
   render(){
-    return (this.state.editing) ?  this.renderForm() : this.renderDisply()
-    
+
+      if (this.state.editing) {
+        return this.renderForm() ;
+       }
+        else {
+        return  this.renderDisply()
+    }
+
   }
 })
 let Board = React.createClass({
@@ -105,24 +118,27 @@ let Board = React.createClass({
       notes: [
       'call Bob',
       'Finish Hw',
-      'Finsih React',
-      'finsih Javascript']
+      'Drink Water',
+      'Take a rest'
+    ]
     }
+  },
+  callback(i,note){
+    console.log('Notes'+note)
+    return (<Note key={note}> {i} </Note>);
   },
   render() {
     return (
       <div className='board'>
-      {this.state.notes.map(function(note,i){
-        console.log('Notes'+note)
-
-        return <Note key={i}>{note}</Note>
-      })}
+      {this.state.notes.map(this.callback)}
       </div>
       )
   }
 })
 // I do not understand why using div in this example.
 ReactDOM.render(<Board count={10}> </Board>,document.getElementById('H'))
+  //<Note>New Note.</Note>,document.getElementById('H'))
+  // 
 
 </script>
 </body>
