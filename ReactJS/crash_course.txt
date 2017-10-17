@@ -121,5 +121,9 @@ We will encounter in the process of creating react components that one component
 The answer to this is “using properties”. properties can point to an entire function.
 
 
+SWEET
+——————————————————————————————————————————————————————————————————————————————————————————
+Last reactJs Tutotrial 14: Creating new components:
+
 
  

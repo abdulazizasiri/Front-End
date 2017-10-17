@@ -57,7 +57,7 @@ let Note = React.createClass({
     this.setState({editing: true})
   },
   remove(){
-    this.props.deleteFromBoard(this.props.index)
+    this.props.deleteFromBoard(this.props.key)
   },
   save(){
     var val = this.refs.newText.value ;
@@ -112,12 +112,7 @@ let Board = React.createClass({
   },
   getInitialState(){
     return {
-      notes: [
-      'call Bob',
-      'Finish Hw',
-      'Drink Water',
-      'Take a rest'
-    ]
+      notes: []
     }
   },
   callback(note,i){
@@ -137,13 +132,20 @@ let Board = React.createClass({
   eachcommonet(){
     return (
     <Note key={i} index={i} updatecommonet={this.updatenotes} deleteFromBoard={this.removeelement}>
-    // {text}
+    {text}
     </Note>
   )
   },
+  add(text){
+    var arr = this.state.notes;
+    arr.push(text);
+    this.setState({notes: arr})
+  },
   render() {
     return (
+      
       <div className='board'>
+      <button onClick={this.add.bind(null,"Add comment")} className='ss'> Add </button>
       {this.state.notes.map(this.callback)}
       </div>
       )
