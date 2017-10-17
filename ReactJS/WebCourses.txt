@@ -1,0 +1,57 @@
+HTML5 + CSS3 : CSS# is really important: 
+
+
+1- Web accessibility 
+
+2-building high conversion web forms.
+
+3-Html5 Canvas
+
+4-Websites performing optimization.
+
+5-Offline Web Application.
+
+6-Javascript promises.
+
+7-Web Tooling and Automation.
+
+8- Asynchronous Javascript Requests. 
+
+9- Javascript Design patterns. 
+
+10-javascript Testing. 
+
+11- ES6
+
+12- OOP JS. 
+
+13 Google Maps API.
+
+14-Progressive web apps.
+
+15-ReactJS 
+
+16-JQUERY
+
+17- AJAX
+
+18-Bootstrap
+
+19- NODE JS
+
+20 MONGODB
+
+21- Client server communication.
+
+22- responsivne web design.
+
+23Linux
+
+24-responsive images.
+
+25-Browser Rendering optimization.
+
+26-Relational database.
+
+
+

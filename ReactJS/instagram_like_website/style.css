@@ -1,0 +1,6 @@
+.static_part{
+	width:100px;
+	height: 500px;
+	top: 40px;
+	background-color: green;
+}

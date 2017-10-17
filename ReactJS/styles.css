@@ -1,0 +1,39 @@
+#background {
+	background-color: black;
+}
+.static_part{
+	width:100%;
+	position: relative;
+	height: 370px;
+	/*background-color: black;*/
+}
+.typography{
+	font-family: Palatino ;
+	position: absolute;
+	left: 40px;
+	color: white;
+	top: 90px;
+}
+span {
+	position: absolute;
+	top: 60px;
+	right: 0px;
+}
+span > button{
+
+	    margin: 30px ;
+}
+.hid{
+	  background-color: Transparent;
+      background-repeat:no-repeat;
+      border: none;
+      cursor:pointer;
+      color: white;
+      overflow: hidden;
+}
+.specifc{
+	position: absolute;
+	bottom: 30px;
+	right: 63px;
+
+}

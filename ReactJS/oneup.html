@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- <meta charset="utf-8"> -->
+ <script src="https://fb.me/react-0.14.3.js"></script>
+  <script src="https://fb.me/react-dom-0.14.3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<title> OneUp Home Page </title>
+</head>
+<body id='background'>
+	<div id="main"> </div>
+	<script type="text/babel">
+
+	let MainPage = React.createClass({
+		render(){
+			return (
+				<div className='static_part'>
+
+				<span>
+				<button className='btn hid'> Home </button>
+				<button  className='btn hid specifc'> Sign in/ </button>
+				<button  className='btn hid'>About </button>
+				<button  className='btn hid'> Create Account </button>
+				</span>
+
+				<h3 className='typography'>{this.props.children}</h3>
+				</div>
+
+				)
+		}
+	})
+	ReactDOM.render(<MainPage>OneUp</MainPage>,document.getElementById('main'))
+	</script>
+	</body>
+	</html>
