@@ -51,23 +51,20 @@ ReactDOM.render(<ul>
 let Note = React.createClass({
   getInitialState(){
     return {editing: false,
-            addnote: false
     }
   },
   edit(){
     this.setState({editing: true})
   },
   remove(){
-    alert('Removing element')
+    this.props.deleteFromBoard(this.props.index)
   },
   save(){
     var val = this.refs.newText.value ;
-    alert(val);
+    this.props.updatecommonet(val,this.props.index);
     this.setState ({editing: false})
   },
-  addnote(){
-    this.setState({addnote: true})
-  },
+
   
   renderDisply(){
     return(
@@ -76,7 +73,7 @@ let Note = React.createClass({
     <span>
     <button onClick={this.edit}>EDIT </button>
     <button onClick={this.remove}> X </button>
-    <button onClick={this.addnote}>ADD</button>
+
     </span>
     </div>
     )
@@ -123,9 +120,26 @@ let Board = React.createClass({
     ]
     }
   },
-  callback(i,note){
-    console.log('Notes'+note)
-    return (<Note key={note}> {i} </Note>);
+  callback(note,i){
+    console.log('Notes'+i)
+    return (<Note key={i} index={i} index={i} updatecommonet={this.updatenotes} deleteFromBoard={this.removeelement}> {note} </Note>);
+  },
+  removeelement(i){
+    var arr = this.state.notes;
+    arr.splice(i,1);
+    this.setState({notes:arr});
+  },
+  updatenotes(newText,i){
+    var arr = this.state.notes;
+    arr[i]=newText;
+    this.setState({notes:arr});
+  },
+  eachcommonet(){
+    return (
+    <Note key={i} index={i} updatecommonet={this.updatenotes} deleteFromBoard={this.removeelement}>
+    // {text}
+    </Note>
+  )
   },
   render() {
     return (

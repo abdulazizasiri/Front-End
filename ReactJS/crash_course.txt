@@ -113,4 +113,13 @@ Multiple child components: Easy.
 —————————————————————————————————————————————————————————————————————————————————————————
 Deleting and updating components:
 
+—————————————————————————————————————————————————————————————————————————————————————————
+
+ Passing Function as Props: 
+We will encounter in the process of creating react components that one component will want to access another component functions: 
+
+The answer to this is “using properties”. properties can point to an entire function.
+
+
+
  
