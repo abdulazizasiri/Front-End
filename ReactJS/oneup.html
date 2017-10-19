@@ -18,20 +18,36 @@
 		render(){
 			return (
 				<div className='static_part'>
-
-				<span>
-				<button className='btn hid'> Home </button>
+				<span className="user_buttons">
+				<button  className='btn hid'> Home </button>
 				<button  className='btn hid specifc'> Sign in/ </button>
 				<button  className='btn hid'>About </button>
 				<button  className='btn hid'> Create Account </button>
 				</span>
-
+				<span className="timespan">
+				<button className="btn btn-link">Week</button>|
+				<button className="btn btn-link"> All-Time </button>
+				</span>
+				<span className="week_id">
+				 <button className="btn btn-link"> Week 10 </button>
+				 </span>
 				<h3 className='typography'>{this.props.children}</h3>
 				</div>
 
 				)
 		}
 	})
+
+   // let post = React.CreateClass({
+   // 	render(){
+   // 		return (
+   // 			<div className='posr_section'>
+
+   // 			<div>
+   // 			)
+   // 	}
+   // })
+
 	ReactDOM.render(<MainPage>OneUp</MainPage>,document.getElementById('main'))
 	</script>
 	</body>

@@ -2,10 +2,9 @@
 	background-color: black;
 }
 .static_part{
-	width:100%;
 	position: relative;
-	height: 370px;
-	/*background-color: black;*/
+	width:100%;
+	height: 100%;
 }
 .typography{
 	font-family: Palatino ;
@@ -14,14 +13,34 @@
 	color: white;
 	top: 90px;
 }
-span {
+.user_buttons {
 	position: absolute;
 	top: 60px;
 	right: 0px;
 }
-span > button{
+.user_buttons > button{
 
 	    margin: 30px ;
+}
+
+.timespan{
+	position: absolute;
+	top: 160px;
+	left: 60px;
+
+}
+.timespan > button {
+	color:red;
+}
+.week_id{
+	position: absolute;
+	color:red;
+	top: 260px;
+	left: 50%;
+
+}
+.week_id > button {
+	color:red;
 }
 .hid{
 	  background-color: Transparent;
