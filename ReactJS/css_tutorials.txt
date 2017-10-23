@@ -1,0 +1,141 @@
+
+CSS3: Basics : 
+
+Layout: using css poropoeties such as :
+
+1- Float 2- display	3- position can be tricky.
+
+
+Review traditional: 
+
+understand first how HTML5 elements are structured.
+
+1- HTML elements can be either: 
+
+A- block B- inline
+
+block elements: span the entire width of the container.
+
+inline: contained inside the nested tags.
+
+
+display property can change the behavior of the structures.
+
+you can do: 
+.block {
+
+display: inline;
+
+}
+
+.inline {
+display: block ; 
+}
+
+floating elements can change the page flow: 
+
+float: left
+“NOT CLEAR: HOW TO USE FLOAT”
+
+position: relative the position of the current item. position it then to left or right . {used for the original position}
+
+
+Absolute: position elements within the parent or the ancestor. VERY HELPFUL.
+
+
+The parent must also be positioned to continued the child element.
+
+
+fixed position is similar t absolute, but it is not affected by its parent element’s positioning. This position  is fixed to the whole web browser.
+
+
+sticky: is a combination of absolute and relative, but it moves until it reaches a certain distance. then the sticky becomes fixed when scrolling the page reaches the 
+
+
+
+WATCH: display, position, float:
+- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -- - -
+The three main properties in CSS: 
+
+display : inline, block, inline-block, flex 
+
+
+position rules: 
+
+1- BY default, positions of items are static. Meaning “You cannot use top right, left , bottom.”
+
+
+- - - - - - - - - - - - - - - - - - —  - - — - -  —  —  — - -  —  — - - - - - 
+
+CSS Grid examples: 
+
+1- first: display: grid; this will initiates the grid only.
+
+2-grid-template-column: // this selector create columns 
+example: 
+
+grid-template-columns: 200px 200px 200px 
+
+create three columns of size 200px. you can embed an image and other stuff.
+
+
+
+3-   grid-template-rows: 100px 60px; // this changes the height of the rows.
+100px the height of elements on the fist row.
+60px the height of element on the second row. 
+etc 
+
+
+4- grid-column-gap
+5-grid-row-gap 
+
+4 and 5 creates spacing between rows and columns
+
+shortcut is: grid-gap: 10px;
+this is the same as 4 and 5 but in one property. This add 10px space on rows and columns.
+
+
+5- NEW UNIT: fr: fr stands for a fraction: it is relative unit to the container. resizing the window will make it fit the container.
+—————————————————————————————————————————————————————————————————————————————
+Question?
+
+How to deal with images? size and format.
+—————————————————————————————————————————————————————————————————————————————
+Basics: 
+1-font-color, cont-family, font-size: basics.
+2-border-bottom: 1px solid black ; add a line under anything a header.
+3-Inheritance and overriding:  we do not care about the head for styling. the head is for adding files. Everything we style goes on the body.
+
+4- Using Classes in CSS and ID: I got it.
+
+17- Box Model: Very important: Every single element on a webpage has four boxes around them: 
+
+1- Content 2- padding 3- border 4-margin
+
+What we have been seeing is the content.
+
+2- pro see the padding: Add some background-color. You will see the padding: 
+
+padding: 20px; this increases the passing on all side by 20p so the content of an element is more far for the box.
+
+3- border: between the edge of the window and the padding. 
+
+padding and borders have extra values to specify carting regions: like border or padding left, right, top and bottom.
+
+After that a question is raised: what is the difference between margin-top and div top.
+
+- background-image: url(imageDirectory)
+ 
+
+
+
+margin
+border
+padding
+box structures. or box model.
+
+
+
+
+
+
