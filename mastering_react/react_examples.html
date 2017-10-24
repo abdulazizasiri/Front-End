@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <link rel="stylesheet" type='text/css' href="style.css">
         <script src="https://fb.me/react-0.14.3.js"></script>
         <script src="https://fb.me/react-dom-0.14.3.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
@@ -12,20 +13,32 @@
 <body>
   <div id='h'> </div>
   <script type='text/babel'>
-  let Com = React.createClass({
+  let Note = React.createClass({
+    getInitialState(){
+      return {checked: false}
+    },
+    handleCheck(){
+      this.setState({checked: !this.state.checked})
+    },
     render(){
-      return (<div>
-        <h1> {this.props.text}</h1>
-        <p>  {this.props.children}</p>
-      </div>)
+      let msg 
+      if(this.state.checked){
+        msg = 'checked'
+      } else {
+        msg = 'unchecked'
+      }
+      return (
+        <div>
+        <input type='checkbox'onChange={this.handleCheck}/>
+        <p> this message is {msg}</p>
+        </div>
+      )
     }
   })
   // props are very powerful, they
   ReactDOM.render(<div>
-    <Com text='Hello World'> This is message 1</Com>
-    <Com text='I am a component'> This is Message 2</Com>
-  <Com text='I have been reused !'> This is message 3</Com>
-  </div>
+    <Note/>
+    </div>
   ,document.getElementById('h'))
   </script>
 </body>
