@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://fb.me/react-0.14.3.js"></script>
+        <script src="https://fb.me/react-dom-0.14.3.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js'> </script>
+        <!-- This is not recommanded for productin websites -->
+        <!-- We will use webpack for serious work-->
+  <title> Nailing React </title>
+</head>
+<body>
+  <div id='h'> </div>
+  <script type='text/babel'>
+  // let Com = React.createClass({
+  class Com extends React.Component {
+      render(){
+      return( 
+        <div>
+        <h2> Hello world </h2>
+        <p> USing Classes I am a react master who will create anything using React </p>
+      </div>
+    )
+    }
+    
+    
+  }
+  ReactDOM.render(<Com/>,document.getElementById('h'))
+  </script>
+</body>
+</html> 
