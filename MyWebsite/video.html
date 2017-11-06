@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head></head>>
+    <body>
+<video id="video1" width="70" height="264"  poster="movie_icon1.svg" onclick="playPause()">
+
+        <source src="skate.mp4" width="170" height="264" type="video/mp4" >
+        <source src="video.webm" type="video/webm" >
+        <source src="video.ogv" type="video/ogg" >                      
+       
+        <param name="movie" value="video.swf" >
+        <param name="quality" value="high">
+        <param name="wmode" value="opaque">
+        <param name="swfversion" value="11.0.0.0">
+        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+        <param name="expressinstall" value="../../Scripts/expressInstall.swf">
+        <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="video.swf" width="500" height="500">
+          <!--<![endif]-->
+          <param name="quality" value="high">
+          <param name="wmode" value="opaque">
+          <param name="swfversion" value="11.0.0.0">
+          <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+          <div>
+            <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+          </div>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+          Unfortunately Your browser is old and does not support full video experience.
+      </object>
+
+
+      </video> 
+    </body>
+
+    <script> 
+            var myVideo=document.getElementById("video1"); 
+            var att=document.createAttribute("poster");
+            if (myVideo.error) {
+                 switch (myVideo.error.code) {
+                   case MEDIA_ERR_NETWORK:alert("Network error - please try again later.");break;
+                   case MEDIA_ERR_DECODE:alert("Video is broken.."); break;
+                   case MEDIA_ERR_SRC_NOT_SUPPORTED:alert("Sorry, your browser can't play this video."); break;
+                 }
+            }
+            else
+            {
+                function playPause()
+                { 
+                    if (myVideo.paused) 
+                    {
+                      myVideo.play();
+                      att.value="";
+                      myVideo.setAttributeNode(att);
+                    }
+                    else myVideo.pause();
+                }
+            }                       
+            </script>
+</html>

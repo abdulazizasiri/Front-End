@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+            <link rel="stylesheet" type='text/css' href="styles.css">
+            <script src="https://fb.me/react-0.14.3.js"></script>
+            <script src="https://fb.me/react-dom-0.14.3.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js'> </script>
+        <title> OneUp Proejct </title>
+        </head>
+        <body>
+                <div class="container" id="container">
+                    </div>
+                   <!-- paired with nsieber -->
+                   
+            <script type='text/babel'>
+
+var Button = ReactBootstrap.Button;
+var Modal = ReactBootstrap.Modal;
+
+
+const Example = React.createClass({
+
+  getInitialState() {
+    return { showModal: false };
+  },
+
+  close() {
+    this.setState({ showModal: false });
+  },
+
+  open() {
+    this.setState({ showModal: true });
+  },
+
+  render() {
+    
+    return (
+      <div>
+        <p>Click to get the full Modal experience!</p>
+
+        <Button
+          bsStyle="primary"
+          bsSize="large"
+          onClick={this.open}
+        >
+          Launch demo modal
+        </Button>
+
+        <Modal show={this.state.showModal} onHide={this.close}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h4>Text in a modal</h4>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+            <h4>Popover in a modal</h4>
+            
+
+            <hr />
+
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.close}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+    );
+  }
+});
+
+React.render (
+  <Example />, document.getElementById('container'))
+
+            </script>
+
+            </body>
+            </html>

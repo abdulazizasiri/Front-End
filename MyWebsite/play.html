@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        </head>
+        <body>
+<!-- <video width="600" height="409" id="videoPlayer" autoplay>
+ <source src="skate.mp4" type="video/mp4">
+</video> -->
+<video height="auto" id='video' controls="controls" preload="none" onclick="this.play()">
+        <source type="video/mp4" src="skate.mp4">
+       </video>
+
+
+<script>
+    $('video').click(function(event) {
+  event.stopPropagation();
+  if ($(this).get(0).paused) {
+    $(this).get(0).play();
+  }
+  else {
+    $(this).get(0).pause();
+  }
+});
+</script>
+
+</body>
+</html>>

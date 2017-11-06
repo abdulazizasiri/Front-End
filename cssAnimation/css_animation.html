@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> Animation </title>
+  <style>
+	body {
+    background-color: lightblue;
+    text-align: center;
+  }
+  .wrapper{
+    width: 100%; 
+    padding: 30px; 
+    box-sizing: border-box;;
+    background: lightblue;
+  }
+  .race{
+    
+    width: 100%;
+      background-color: lightblue;
+/*Basicallt moves an element to the x-axos*/
+        /*transform: translateX(100px); */
+      /*transform: scale(10,10); Enlarge the element*/
+      /*transform: rotateX(120deg);*/
+      
+      /*transform: rotateX(180deg);*/
+      /*transform:rotateY(90deg);*/
+      transform: scaleX(2);
+  }
+  .mario{
+    width: 50px;
+    position: relative;
+    bottom: 150px;
+    right: 500px;
+    animation: drive 2s both infinte linear.
+                jump 3s 1.2s ease; 
+
+    animation-timing-function: ease;; 
+  /* The last one is really cool. You need to check this website: http://cubic-bezier.com/#1,.22,.53,.49*/
+    /*You can  create with cubic-bezier how fase the thing you want to animate is*/
+  }
+  @keyframes drive {
+      from {transform: translateX(0)}
+      to {transform: translateX(1000px)}
+  }
+  @keyframes drivegreen {
+    from {transform: translateX(0) scale(1);}
+    to {transform: translateX(1200px) scale(2);}
+  }
+  @keyframes jump { 
+    0%{bottom: 150px} 
+    50%{bottom: 200px} 
+    100%{bottom: 150px} 
+  }
+  .mario2{
+    width: 50px;
+    position: relative;
+    bottom: 190px;
+    right: 600px; 
+    animation-name: drivegreen;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+  .circle{
+    width: 100px ;
+    padding: 50px 0; 
+    margin: 60px auto; 
+    background: green;
+    color: white;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: margin-right 1s;
+
+    
+  }
+  .circle:hover{
+    background: red;
+    transform: rotate(360deg);
+  }
+  </style>
+	</head>
+	<body> 
+
+<div class='wrapper'>
+<img class="race" src ='cars_race.jpeg'/>
+<img class="mario"src ='mario.png'/>
+<img class="mario2"src ='mario2.png'/>
+<!-- <div class="circle"> Hover Me </div> -->
+</div>
+<!-- <audio autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="smb_mariodie.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> -->
+	</body>
+	</html>

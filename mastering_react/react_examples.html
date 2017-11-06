@@ -15,31 +15,100 @@
   <script type='text/babel'>
   let Note = React.createClass({
     getInitialState(){
-      return {checked: false}
+      return {editing: false} // when the app is loaded, we want the main form
     },
-    handleCheck(){
-      this.setState({checked: !this.state.checked})
+    edit(){
+      this.setState({editing : true}) //  when we click on ediiti, make it true , to run the Form
+    },
+    save(){  // this is actually a button that can put us back to the main form after savin
+      let val = this.refs.NewText.value;
+      this.props.updatenotetext(val,this.props.index)
+      this.setState({editing: false})    
+    },
+      renderForm(){
+        return (
+          <div className="note">
+        <textarea ref="NewText"></textarea>
+        <button onClick={this.save}> save </button>
+        </div>
+      )
+    },
+    renderDisplay(){
+      return (
+      <div className='note'>
+      <span>
+      <button onClick={this.edit}> Edtit </button>
+      <button onClick={this.remove}> X </button>
+      </span>
+      <p>{this.props.children}</p>
+      </div>
+    )
+  },
+    remove(){
+      this.props.deleteNote(this.props.index);
     },
     render(){
-      let msg 
-      if(this.state.checked){
-        msg = 'checked'
-      } else {
-        msg = 'unchecked'
+      return (this.state.editing) ? this.renderForm() : this.renderDisplay()
+      
+    }
+  })
+  
+  let Board = React.createClass({
+    propTypes: {
+      count: function(props, propName){
+        if (typeof props[propName] !== 'number') {
+          return new Error('Must be a numner. This is not allowed: '+props[propName]);
+      
+        } if (props[propName]> 100) {
+          return new Error('Must be < 100. This number is big: '+props[propName]);
+        
+        }
       }
+    },
+    removeNote(i){
+      let arr = this.state.Notes;
+      arr.splice(i,1);
+      this.setState({Notes: arr}) 
+    },
+    updateNote(NewText, i) {
+      let arr = this.state.Notes; 
+      arr[i]=NewText;
+      this.setState({Notes: arr}) 
+    },
+    getInitialState(){
+      return {
+         Notes: ['']
+      }
+    },
+  callback: function(note,i){
+      return <Note key={i} index={i} updatenotetext={this.updateNote} deleteNote={this.removeNote}>
+      {note}
+      </Note>
+    }, 
+    addN(text){
+      let addDynamically = this.state.Notes; 
+      addDynamically.push(text);
+      this.setState({Notes:addDynamically});
+    },
+    render(){
+      
       return (
+
         <div>
-        <input type='checkbox'onChange={this.handleCheck}/>
-        <p> this message is {msg}</p>
+              <div className='board'>
+              <button onClick={this.addN.bind(null,'Add Note')}> Add ME </button>
+
+          {this.state.Notes.map(this.callback)}
+        </div>
         </div>
       )
     }
-  })
+  });
   // props are very powerful, they
-  ReactDOM.render(<div>
-    <Note/>
-    </div>
-  ,document.getElementById('h'))
+  ReactDOM.render(
+    
+    <Board count={10}></Board>
+      ,document.getElementById('h'))
   </script>
 </body>
 </html> 
