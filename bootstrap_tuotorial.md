@@ -8,6 +8,6 @@
   text-COLORS or bg-COLORS
   
 3- ImagesL using images classes such as: img-fluid, this makes the image more responsive.
-   You can also specify a roundness property to images using: rounded, rounded-DIR. DIR can be, top, left, right, bottom. circle-0, circle
+   You can also specify a roundness property to images using: rounded, rounded-DIR. DIR can be, top, left, right, bottom. circle-0, circle. You can also use float-right, bottom, left, top.
    
   
