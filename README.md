@@ -25,8 +25,7 @@ Add a class of nav to the nav element. There are some optional classes on nav el
 
 Moreover, children items inside <code> nav </code> element are the anchor tags.
 
-<a>. These element must have the two classes
-
+<a>. These element must have the two classes <code> nav-item </code> and <code> nav-link </code>.
 
 
 ### navbars
