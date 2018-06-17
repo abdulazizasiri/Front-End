@@ -25,13 +25,23 @@
 
         <nav class="navbar bg-dark  navbar-dark navbar-expand-sm">
           <div class="container">
-            <div class="navbar-brand">Wisodm Pet</div>
-            <div class="navbar-nav ">
-              <a  class="nav-link nav-item active"  href="#"> Home </a>
-              <a  class="nav-link nav-item disabled "  href="#"> Mission </a>
-              <a  class="nav-link nav-item"  href="#"> Services </a>
-              <a  class="nav-link nav-item"  href="#"> Staff </a>
-              <a  class="nav-link nav-item"  href="#"> Testimonials </a>
+            <div class="navbar-nav ml-auto">
+              <div class="dropdown">
+                <a  class="nav-link nav-item dropdown-toggle"
+                data-toggle="dropdown" id="homeDropdown"
+                aria-haspopup="true" aria-expanded="false"
+                href="#"> Home </a>
+
+                <div class="dropdown-menu" aria-labelledby="homeDropdown">
+
+
+                  <a  class="dropdown-item"  href="#"> Mission </a>
+                  <a  class="dropdown-item"  href="#"> Services </a>
+                  <a  class="dropdown-item"  href="#"> Staff </a>
+                  <a  class="dropdown-item"  href="#"> Testimonials </a>
+                </div>
+              </div>
+
             </div>
           </div>
 

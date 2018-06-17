@@ -145,5 +145,75 @@ You can add clickable images, text or anything, but that requires wrapping the e
 
         </nav>
 
-        
+
 ```
+
+
+### Adding a dropdown
+
+
+Dropdown navs are quite complicated to make. They are used in  a menus
+
+
+- Dropdown setups. dropdown requires a container which is a class of <code> dropdown</code>. There is a <code> dropdown-toggle</code> class.
+
+
+- In order to activate dropdown, we use <code>data-toggle="dropdown"</code>
+
+- After that, you have to build the menu itself with <code> dropdown-menu</code> each of the dropdown-menu is a <code> dropdown-item</code>
+
+- Add and id and aria attributes.
+
+
+An example,
+
+```html
+
+        <nav class="navbar bg-dark  navbar-dark navbar-expand-sm">
+          <div class="container">
+            <div class="navbar-nav ml-auto">
+              <div class="dropdown">
+                <a  class="nav-link nav-item dropdown-toggle"
+                data-toggle="dropdown" id="homeDropdown"
+                aria-haspopup="true" aria-expanded="false"
+                href="#"> Home </a>
+
+                <div class="dropdown-menu" aria-labelledby="homeDropdown">
+
+
+                  <a  class="dropdown-item"  href="#"> Mission </a>
+                  <a  class="dropdown-item"  href="#"> Services </a>
+                  <a  class="dropdown-item"  href="#"> Staff </a>
+                  <a  class="dropdown-item"  href="#"> Testimonials </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </nav>
+```
+
+
+Notice, the process is lengthy to create a dropdown menu in bootstrap, but it adds a great navigation to a website.
+
+
+
+
+### Form classes.
+
+
+- Use form-inline classes.
+
+- use form-control
+
+
+### positioning navbar
+
+
+navbars can be positited using <code> fixed-POS </code> where POS can be bottom, top, sticky and others.
+
+
+
+### Collapsable content.  hamburger icon.
