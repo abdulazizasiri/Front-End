@@ -94,7 +94,7 @@ Example with a container
 
         <nav class="navbar bg-dark  navbar-dark navbar-expand-sm">
           <div class="container"> <!-- Container will make it look better -->
-            
+
             <div class="navbar-nav ">
               <a  class="nav-link nav-item"  href="#"> Home </a>
               <a  class="nav-link nav-item"  href="#"> Mission </a>
@@ -107,4 +107,43 @@ Example with a container
 
         </nav>
 
+```
+
+
+###  Navbar brand & Text.
+
+
+These are used with text or logos. We can add to the navbar component,
+
+- navbar-brand
+
+- Link and Headline
+
+- Using Images
+
+- navbar-text
+
+
+You can add clickable images, text or anything, but that requires wrapping the element around a <a> tag.
+
+
+```html
+
+
+        <nav class="navbar bg-dark  navbar-dark navbar-expand-sm">
+          <div class="container">
+            <div class="navbar-brand">Wisodm Pet</div>
+            <div class="navbar-nav ">
+              <a  class="nav-link nav-item active"  href="#"> Home </a>
+              <a  class="nav-link nav-item disabled "  href="#"> Mission </a>
+              <a  class="nav-link nav-item"  href="#"> Services </a>
+              <a  class="nav-link nav-item"  href="#"> Staff </a>
+              <a  class="nav-link nav-item"  href="#"> Testimonials </a>
+            </div>
+          </div>
+
+
+        </nav>
+
+        
 ```
