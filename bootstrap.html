@@ -48,6 +48,42 @@
 
         <!-- </nav> -->
 
+
+        <!-- Fomrs -->
+        <form>
+          <fieldset class="form-group">
+            <legend>Owner Info</legend>
+            <div class="form-group">
+              <label for="Owner Name"> Owner Name </label>
+              <input class="form-control"type="text" id="ownername" placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+              <label class="form-control-label" for="email address"> Email Address </label>
+              <input class="form-control" type="email" id="email" placeholder="Your Email">
+              <small id="emailHelp"> We'll share your email > </small>
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend>Pet Info </legend>
+            <div class="form-group">
+              <label class="form-control-label" for="Pet Name"> Pet Name </label>
+              <input class="form-control" type="text" id="petername" placeholder="Your Pet name">
+            </div>
+            <div class="form-group">
+              <label for="Pettype"> Pet Type </label>
+              <select id="pettype">
+
+                <option> Choose </option>
+                    <option vlaue="cat"> Cat </option>
+                    <option vlaue="dog"> Dog </option>
+                    <option vlaue="other"> Other </option>
+
+            </div>
+
+          </fieldset>
+          <button type="submit" class="form-control btn bg-success"> Submit </button>
+        </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

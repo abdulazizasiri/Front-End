@@ -232,3 +232,76 @@ This components add a great to a website navigation.
 - Other Properties
 
 - navbar-toggler-icon.
+
+
+
+### Forms
+
+
+Forms are an important part of a great interface. There are certain components to be used when dealing with bootstrap's forms such as <code> form-inline </code> and more.
+
+
+### Basic Forms.
+First of all you have to group form elements. We use for that <code>form-group</code> and <code>form-text</code>
+
+
+Form control components such as,
+
+- <code>form-control</code> It is for inputs, selects, and text areas.
+
+- <code>form-control-label</code>
+
+- <code>form-control-file</code> for file input
+
+
+
+Form group adds a nice spacing  between elements inside a form.
+
+
+class="form-control" puts an element in one line and the label in another.
+it goes to certain elements such as <code>input</code> and <code>textarea</code>
+
+
+An example of a simple form in bootstrap 4.
+
+
+
+```html
+
+<form>
+  <fieldset class="form-group">
+    <legend>Owner Info</legend>
+    <div class="form-group">
+      <label for="Owner Name"> Owner Name </label>
+      <input class="form-control"type="text" id="ownername" placeholder="Your name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label" for="email address"> Email Address </label>
+      <input class="form-control" type="email" id="email" placeholder="Your Email">
+      <small id="emailHelp"> We'll share your email > </small>
+    </div>
+  </fieldset>
+  <fieldset class="form-group">
+    <legend>Pet Info </legend>
+    <div class="form-group">
+      <label class="form-control-label" for="Pet Name"> Pet Name </label>
+      <input class="form-control" type="text" id="petername" placeholder="Your Pet name">
+    </div>
+    <div class="form-group">
+      <label for="Pettype"> Pet Type </label>
+      <select id="pettype">
+
+        <option> Choose </option>
+            <option vlaue="cat"> Cat </option>
+            <option vlaue="dog"> Dog </option>
+            <option vlaue="other"> Other </option>
+
+    </div>
+
+  </fieldset>
+  <button type="submit" class="form-control btn bg-success"> Submit </button>
+</form>
+
+
+```
