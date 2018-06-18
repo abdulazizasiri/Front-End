@@ -217,3 +217,18 @@ navbars can be positited using <code> fixed-POS </code> where POS can be bottom,
 
 
 ### Collapsable content.  hamburger icon.
+
+
+This components add a great to a website navigation.
+
+
+
+- We need a couple of classes such as <code>collapse</code> and <code>navbar-collabe</code> and an id.
+
+- For toggler classes we used
+
+- navbar-toggler
+
+- Other Properties
+
+- navbar-toggler-icon.
