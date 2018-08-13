@@ -1,66 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
-	<title>Using CSS Grid</title>
-	<style>
-		body{
-			color: #fff;
-			font-family: 'Nunito Semibold';
-			text-align: center;
-		}
-		#content{
-			display: grid;
-			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: repeat(4, minmax(150px, auto));
-			grid-gap: 10px;
-			max-width: 960px;
-			margin: 0 auto;
-		}
-		#content div{
-			background: #9bbced;
-			padding: 30px;
-		}
-		#content div:nth-child(even){
-			background: #977;
-			padding: 30px;
-		}
-		.one{
-			/*grid-column-start: 1;
-			grid-column-end: 3;*/
-			grid-column: 1 / 3;
-		}
-		.two{
-			grid-column: 3 / 7;
-		}
-		.three{
-			grid-column: 1 / 4;
-			grid-row: 2 / 4;
-		}
-		.four{
-			grid-column: 4 / 7;
-			grid-row: 2 / 4;
-		}
-		.five{
-			grid-column: 3 / 7;
-		}
-		.six{
-			grid-column: 1 / 3;
-			grid-row: 4;
-		}
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	content="width-device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"
+	content="ie=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Layout </title>
 </head>
 <body>
+	<div class="wrapper">
+		<!--Navigation -->
+		<nav class="main-nav">
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">About</a>
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">Contacts</a>
+				</li>
+			</ul>
 
-	<div id="content">
+		</nav>
+		<section class="top-container">
+			<header class="showcase">
+				<h1> Your Web  Presence</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora maxime explicabo, quo error perferendis, numquam?</p>
+				<a href="#" class="btn"> Read More</a>
+			</header>
+			<div class="top-box top-box-a">
+			<h4> Membership</h4>
+			<p class="price">$199/mo</p>
+			<a href="" class="btn"> Buy Now</a>
+			</div>
+			<div class="top-box top-box-b">
+			<h4>Pro Membership</h4>
+			<p class="price">$299/mo</p>
+			<a href="" class="btn"> Buy Now</a>
+			</div>
+		</section>
+		<!-- Boxes Section -->
+		<section class="boxes">
+			<div class="box">
+				<i class="fas fa-chart-pie fa-4x"></i>
+				<h3>Analytics</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, debitis.</p>
+			</div>
 
-		<div class="one">1</div>
-		<div class="two">2</div>
-		<div class="three">3</div>
-		<div class="four">4</div>
-		<div class="five">5</div>
-		<div class="six">6</div>
+			<div class="box">
+				<i class="fas fa-globe fa-4x"></i>
+				<h3>Marketing</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, debitis.</p>
+			</div>
 
-	</div>
+			<div class="box">
+				<i class="fas fa-cog fa-4x"></i>
+				<h3>Development</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, debitis.</p>
+			</div>
+
+			<div class="box">
+				<i class="fas fa-users fa-4x"></i>
+				<h3>Supports</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, debitis.</p>
+			</div>
+		</section>
+
+		<section class="info">
+
+			<img class="showcaseImg" src="showcase2.jpeg" alt="">
+			<div>
+
+				<h2>Your Business on the Web</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo labore nemo inventore velit cum, eligendi, facilis facere eaque placeat, quos temporibus iste at maxime ratione, harum quod ex aspernatur mollitia.</p>
+				<a href="" class="btn">Learn More</a>
+				</div>
+		</section>
+		<section class="protfolio">
+
+			<img src="https://source.unsplash.com/random/203x201" alt="">
+			<img src="https://source.unsplash.com/random/203x202" alt="">
+			<img src="https://source.unsplash.com/random/203x203" alt="">
+			<img src="https://source.unsplash.com/random/203x204" alt="">
+			<img src="https://source.unsplash.com/random/203x205" alt="">
+			<img src="https://source.unsplash.com/random/203x206" alt="">
+			<img src="https://source.unsplash.com/random/203x207" alt="">
+			<img src="https://source.unsplash.com/random/203x208" alt="">
+			<img src="https://source.unsplash.com/random/203x209" alt="">
+
+		</section>
+		<footer>
+
+			<p>Grid Layout &copy 2018</p>
+		</footer>
+		</div>
+		<!-- Wrapper ends -->
 
 </body>
 </html
