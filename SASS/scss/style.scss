@@ -1,0 +1,32 @@
+$deepBlue: #032f3e;
+$offWhite: #f8f9fb;
+$sectionHeader: 124px;
+#main-nav{
+  background: $deepBlue;
+  ul{
+    width: 100%;
+  }
+  li {
+    float: left;
+     width: 14%;
+  }
+  a{
+    color: $offWhite;
+    text-decoration: none;
+    padding: 16px;
+    text-align: center;;
+    display: block;
+  }
+
+
+} // Content end.
+#main-nav ul:after {
+  content: "";
+  display: block;;
+  clear: both;
+
+}
+section h1{
+  font-size: $sectionHeader;
+  color: $deepBlue;
+}
